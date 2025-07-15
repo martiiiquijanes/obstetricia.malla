@@ -28,25 +28,8 @@
   </div>
 
   <script src="script.js"></script>
-</body>
+</body> 
 </html>
-body { font-family: Arial; margin: 20px; }
-.grid { display: flex; flex-wrap: wrap; gap: 20px; }
-.semester { flex: 1; min-width: 200px; background: #f5f5f5; padding: 10px; border-radius: 6px; }
-.course {
-  padding: 8px; margin: 5px 0; background: #ddd; cursor: pointer;
-  border-radius: 4px; transition: background 0.3s;
-}
-.course.approved { background: #8fbc8f; color: white; }
-.course.available { border: 2px dashed #f90; }
-.popup {
-  position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
-  background: white; border: 2px solid #333; padding: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5); display: none;
-}
-#closePopup {
-  position: absolute; top: 5px; right: 5px; cursor: pointer;
-}
 document.querySelectorAll('.course').forEach(c => {
   c.addEventListener('click', () => {
     const name = c.dataset.name;
